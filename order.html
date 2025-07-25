@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Catering - MbokCatering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-bg-light text-text-dark">
+
+    <header class="bg-bg-light shadow-md fixed w-full z-50">
+        <nav class="navbar navbar-expand-lg bg-bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">MbokCatering</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="order.html">Pesan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-primary-color text-text-light py-24 text-center">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pesan Sekarang</h1>
+            <p class="text-lg">Isi formulir di bawah untuk memulai pesanan Anda.</p>
+        </div>
+    </section>
+
+    <section class="section-padding py-16">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <h2 class="section-title text-primary-color mb-5" data-aos="fade-up">Formulir Pemesanan Catering</h2>
+                    <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                        Mohon isi detail pesanan Anda dengan lengkap. Tim kami akan segera menghubungi Anda untuk konfirmasi.
+                    </p>
+
+                    <form id="orderForm" action="#" method="POST" class="p-4 p-md-5 bg-bg-medium rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mb-4">
+                            <label for="nama_lengkap" class="form-label fw-semibold">Nama Lengkap Anda <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="contoh@email.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="telepon" class="form-label fw-semibold">Nomor Telepon/WhatsApp <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="telepon" name="telepon" placeholder="+62 8xx xxxx xxxx" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Ringkasan Pesanan Anda dari Keranjang:</label>
+                            <div id="cart-summary-display" class="border p-3 rounded bg-white-50">
+                                <p class="text-muted text-center" id="empty-cart-order-message">Keranjang Anda kosong. Silakan kembali ke <a href="menu.html" class="text-primary-color">Menu</a> untuk memilih.</p>
+                            </div>
+                            <p class="text-end fw-bold mt-2">Total Harga: <span id="summary-total-price" class="text-primary-color">Rp 0</span></p>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="jenis_pesanan" class="form-label fw-semibold">Jenis Pesanan Utama (Jika tidak dari keranjang) </label>
+                            <select class="form-select" id="jenis_pesanan" name="jenis_pesanan">
+                                <option value="">Pilih Jenis Pesanan (Opsional)</option>
+                                <option value="Nasi Box Komplit">Nasi Box Komplit</option>
+                                <option value="Snack Box">Snack Box</option>
+                                <option value="Paket Prasmanan">Paket Prasmanan</option>
+                                <option value="Tumpeng & Nasi Kuning">Tumpeng & Nasi Kuning</option>
+                                <option value="Catering Harian">Catering Harian</option>
+                                <option value="Lainnya">Lainnya (Mohon jelaskan di detail)</option>
+                            </select>
+                            <small class="form-text text-muted">Akan diabaikan jika ada item dari keranjang.</small>
+                        </div>
+                        <div class="mb-4">
+                            <label for="jumlah_porsi" class="form-label fw-semibold">Jumlah Porsi/Pax/Box (Jika tidak dari keranjang)</label>
+                            <input type="number" class="form-control" id="jumlah_porsi" name="jumlah_porsi" min="1" placeholder="Minimum 1">
+                            <small class="form-text text-muted">Masukkan jumlah jika Anda tidak menggunakan fitur keranjang.</small>
+                        </div>
+                        <div class="mb-4">
+                            <label for="tanggal_pengiriman" class="form-label fw-semibold">Tanggal Pengiriman/Acara <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" id="tanggal_pengiriman" name="tanggal_pengiriman" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="waktu_pengiriman" class="form-label fw-semibold">Waktu Pengiriman <span class="text-danger">*</span></label>
+                            <input type="time" class="form-control" id="waktu_pengiriman" name="waktu_pengiriman" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="alamat_lengkap" class="form-label fw-semibold">Alamat Pengiriman Lengkap <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="alamat_lengkap" name="alamat_lengkap" rows="4" placeholder="Jalan, Nomor Rumah, RT/RW, Kelurahan, Kecamatan, Kota, Kode Pos" required></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="detail_pesanan" class="form-label fw-semibold">Detail Pesanan / Catatan Khusus</label>
+                            <textarea class="form-control" id="detail_pesanan" name="detail_pesanan" rows="5" placeholder="Contoh: Preferensi alergi, tema acara, request tambahan. Item dari keranjang akan otomatis ditambahkan di sini."></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn-submit">Kirim Pesanan</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-lg">
+                            Setelah mengisi formulir, kami sarankan untuk melanjutkan komunikasi via WhatsApp untuk konfirmasi cepat:
+                        </p>
+                        <button id="send-whatsapp-order" class="btn btn-success btn-lg my-3 whatsapp-order-btn">
+                            <i class="fab fa-whatsapp me-2"></i> Kirim Pesanan via WhatsApp
+                        </button>
+                        <p class="text-muted text-sm">Tim kami siap membantu Anda setiap hari (07.00 - 19.00 WIB).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-text-dark text-text-light py-12">
+        <div class="container px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-secondary-color text-lg font-semibold mb-4">MbokCatering</h3>
+                <p class="text-sm leading-relaxed">
+                    Menghadirkan kelezatan kuliner Nusantara dengan sentuhan modern. Kami berkomitmen menyajikan hidangan berkualitas untuk setiap acara Anda.
+                </p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="text-text-light hover:text-secondary-color mr-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-text-light hover:text-secondary-color mr-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-text-light hover:text-secondary-color mr-4"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-secondary-color text-lg font-semibold mb-4">Link Cepat</h3>
+                <ul class="text-sm">
+                    <li class="mb-2"><a href="index.html" class="hover:underline">Beranda</a></li>
+                    <li class="mb-2"><a href="about.html" class="hover:underline">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="menu.html" class="hover:underline">Menu</a></li>
+                    <li class="mb-2"><a href="order.html" class="hover:underline">Pesan</a></li>
+                    <li class="mb-2"><a href="contact.html" class="hover:underline">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-secondary-color text-lg font-semibold mb-4">Hubungi Kami</h3>
+                <p class="text-sm">
+                    Jl. Wirobrajan No.123, Kota Yogyakarta, Daerah Istimewa Yogyakarta, 55253<br>
+                    Email: info@mbokcatering.com<br>
+                    Telepon: (021) 1234 5678<br>
+                    WhatsApp: <a href="https://wa.me/6283892313599" target="_blank" class="hover:underline">+62 83892313599</a>
+                </p>
+            </div>
+        </div>
+        <div class="copyright text-center text-xs mt-8">
+            &copy; 2025 MbokCatering. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6283892313599" class="whatsapp-float fixed bottom-8 right-8" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="orderToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage">
+                    </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <div id="errorToast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="errorToastMessage">
+                    </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartSummaryDisplay = document.getElementById('cart-summary-display');
+            const emptyCartOrderMessage = document.getElementById('empty-cart-order-message');
+            const detailPesananTextarea = document.getElementById('detail_pesanan');
+            const summaryTotalPriceElement = document.getElementById('summary-total-price');
+            const sendWhatsappOrderBtn = document.getElementById('send-whatsapp-order');
+      
+            const orderToast = new bootstrap.Toast(document.getElementById('orderToast'));
+            const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
+            const toastMessageElement = document.getElementById('toastMessage');
+            const errorToastMessageElement = document.getElementById('errorToastMessage');
+
+
+            let cart = {}; 
+
+            function showToast(message, type = 'success') {
+                if (type === 'success') {
+                    document.getElementById('orderToast').classList.remove('bg-danger');
+                    document.getElementById('orderToast').classList.add('bg-success');
+                    toastMessageElement.textContent = message;
+                    orderToast.show();
+                } else if (type === 'error') {
+                    document.getElementById('errorToast').classList.remove('bg-success');
+                    document.getElementById('errorToast').classList.add('bg-danger');
+                    errorToastMessageElement.textContent = message;
+                    errorToast.show();
+                }
+            }
+
+
+            function loadCartFromLocalStorage() {
+                const savedCart = localStorage.getItem('mbokcatering_cart');
+                if (savedCart) {
+                    cart = JSON.parse(savedCart);
+                }
+            }
+
+            function renderCartSummary() {
+                cartSummaryDisplay.innerHTML = ''; t
+                let total = 0;
+                let orderDetails = "Detail Pesanan:\n";
+
+                if (Object.keys(cart).length === 0) {
+                    emptyCartOrderMessage.style.display = 'block';
+                    sendWhatsappOrderBtn.classList.add('disabled'); 
+                    orderDetails += "Tidak ada item yang dipilih dari keranjang.";
+                } else {
+                    emptyCartOrderMessage.style.display = 'none';
+                    sendWhatsappOrderBtn.classList.remove('disabled');
+                    const table = document.createElement('table');
+                    table.classList.add('table', 'table-bordered', 'table-striped');
+                    table.innerHTML = `
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th class="text-center">Jumlah</th>
+                                <th class="text-end">Harga Satuan</th>
+                                <th class="text-end">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3" class="text-end">TOTAL</th>
+                                <th class="text-end"><span id="summary-table-total"></span></th>
+                            </tr>
+                        </tfoot>
+                    `;
+                    const tbody = table.querySelector('tbody');
+
+                    for (const id in cart) {
+                        const item = cart[id];
+                        const itemTotal = item.price * item.qty;
+                        total += itemTotal;
+
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${item.name}</td>
+                            <td class="text-center">${item.qty}</td>
+                            <td class="text-end">Rp ${item.price.toLocaleString('id-ID')}</td>
+                            <td class="text-end">Rp ${itemTotal.toLocaleString('id-ID')}</td>
+                        `;
+                        tbody.appendChild(row);
+
+                        orderDetails += `- ${item.name} (${item.qty} x Rp ${item.price.toLocaleString('id-ID')}) = Rp ${itemTotal.toLocaleString('id-ID')}\n`;
+                    }
+                    cartSummaryDisplay.appendChild(table);
+                    table.querySelector('#summary-table-total').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+                    orderDetails += `\nTotal Keseluruhan: Rp ${total.toLocaleString('id-ID')}`;
+                }
+
+                summaryTotalPriceElement.textContent = `Rp ${total.toLocaleString('id-ID')}`;
+                
+
+                if (Object.keys(cart).length > 0) {
+                    detailPesananTextarea.value = orderDetails + "\n\n" + (detailPesananTextarea.dataset.userAddedContent || "");
+                } else if (detailPesananTextarea.dataset.userAddedContent) {
+                    detailPesananTextarea.value = detailPesananTextarea.dataset.userAddedContent;
+                } else {
+                    detailPesananTextarea.value = "";
+                }
+
+                const jenisPesanan = document.getElementById('jenis_pesanan');
+                const jumlahPorsi = document.getElementById('jumlah_porsi');
+                if (Object.keys(cart).length > 0) {
+                    jenisPesanan.setAttribute('disabled', 'true');
+                    jumlahPorsi.setAttribute('disabled', 'true');
+                    jenisPesanan.value = ''; 
+                    jumlahPorsi.value = ''; 
+                } else {
+                    jenisPesanan.removeAttribute('disabled');
+                    jumlahPorsi.removeAttribute('disabled');
+                }
+            }
+
+            function clearCartFromLocalStorage() {
+                localStorage.removeItem('mbokcatering_cart');
+                cart = {}; 
+                detailPesananTextarea.dataset.userAddedContent = ""; 
+                renderCartSummary();
+            }
+
+            sendWhatsappOrderBtn.addEventListener('click', (e) => {
+                e.preventDefault(); 
+
+                const namaLengkap = document.getElementById('nama_lengkap').value.trim();
+                const telepon = document.getElementById('telepon').value.trim();
+                const tanggalPengiriman = document.getElementById('tanggal_pengiriman').value.trim();
+                const waktuPengiriman = document.getElementById('waktu_pengiriman').value.trim();
+                const alamatLengkap = document.getElementById('alamat_lengkap').value.trim();
+
+                if (!namaLengkap || !telepon || !tanggalPengiriman || !waktuPengiriman || !alamatLengkap) {
+                    showToast('Mohon lengkapi semua bidang yang wajib diisi (Nama, Telepon, Tanggal, Waktu, Alamat) sebelum mengirim via WhatsApp.', 'error');
+                    return;
+                }
+
+                let message = "Halo MbokCatering, saya ingin memesan:\n\n";
+
+                if (Object.keys(cart).length > 0) {
+                    message += "*Detail Pesanan dari Keranjang:*\n";
+                    let totalHarga = 0;
+                    for (const id in cart) {
+                        const item = cart[id];
+                        const itemTotal = item.price * item.qty;
+                        totalHarga += itemTotal;
+                        message += `- ${item.name} (${item.qty} pcs/pax) - Rp ${itemTotal.toLocaleString('id-ID')}\n`;
+                    }
+                    message += `\n*Total Harga Keranjang: Rp ${totalHarga.toLocaleString('id-ID')}*\n\n`;
+                } else {
+                    const jenisPesanan = document.getElementById('jenis_pesanan').value;
+                    const jumlahPorsi = document.getElementById('jumlah_porsi').value;
+                    if (jenisPesanan && jumlahPorsi) {
+                        message += `- Jenis Pesanan: ${jenisPesanan}\n`;
+                        message += `- Jumlah: ${jumlahPorsi}\n\n`;
+                    } else {
+                        message += "Tidak ada item spesifik yang dipilih.\n\n";
+                    }
+                }
+
+                message += "*Informasi Pemesan:*\n";
+                message += `- Nama: ${namaLengkap}\n`;
+                message += `- Telepon/WhatsApp: ${telepon}\n`;
+                if (document.getElementById('email').value.trim()) {
+                    message += `- Email: ${document.getElementById('email').value.trim()}\n`;
+                }
+                message += `- Tanggal Pengiriman: ${tanggalPengiriman}\n`;
+                message += `- Waktu Pengiriman: ${waktuPengiriman}\n`;
+                message += `- Alamat Pengiriman: ${alamatLengkap}\n`;
+
+                const catatanKhusus = detailPesananTextarea.value.trim();
+                let userNotes = "";
+                if (Object.keys(cart).length > 0) {
+                    const generatedCartSummary = "Detail Pesanan:\n" + Object.keys(cart).map(id => {
+                        const item = cart[id];
+                        return `- ${item.name} (${item.qty} x Rp ${item.price.toLocaleString('id-ID')}) = Rp ${(item.price * item.qty).toLocaleString('id-ID')}`;
+                    }).join('\n') + `\n\nTotal Keseluruhan: Rp ${Object.values(cart).reduce((sum, item) => sum + (item.price * item.qty), 0).toLocaleString('id-ID')}`;
+                    
+                    const currentValue = detailPesananTextarea.value;
+                    if (currentValue.startsWith(generatedCartSummary.trim())) {
+                        userNotes = currentValue.substring(generatedCartSummary.trim().length).trim();
+                    } else {
+                        userNotes = currentValue;
+                    }
+                } else {
+                    userNotes = catatanKhusus;
+                }
+
+                if (userNotes) {
+                    message += `\n*Catatan Tambahan dari Anda:* ${userNotes}\n`;
+                }
+
+
+                const whatsappNumber = "6283892313599"; 
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                window.open(whatsappUrl, '_blank');
+
+                showToast('Pesanan Anda berhasil disiapkan untuk WhatsApp! Keranjang dan formulir akan dikosongkan secara otomatis.');
+                clearCartFromLocalStorage();
+                document.getElementById('orderForm').reset();
+                document.getElementById('jenis_pesanan').removeAttribute('disabled');
+                document.getElementById('jumlah_porsi').removeAttribute('disabled');
+            });
+
+            detailPesananTextarea.addEventListener('input', () => {
+                if (Object.keys(cart).length > 0) {
+                    const generatedCartSummary = "Detail Pesanan:\n" + Object.keys(cart).map(id => {
+                        const item = cart[id];
+                        return `- ${item.name} (${item.qty} x Rp ${item.price.toLocaleString('id-ID')}) = Rp ${(item.price * item.qty).toLocaleString('id-ID')}`;
+                    }).join('\n') + `\n\nTotal Keseluruhan: Rp ${Object.values(cart).reduce((sum, item) => sum + (item.price * item.qty), 0).toLocaleString('id-ID')}`;
+                    
+                    const currentValue = detailPesananTextarea.value;
+                    if (currentValue.startsWith(generatedCartSummary.trim())) {
+                        detailPesananTextarea.dataset.userAddedContent = currentValue.substring(generatedCartSummary.trim().length).trim();
+                    } else {
+                        detailPesananTextarea.dataset.userAddedContent = currentValue;
+                    }
+                } else {
+                    detailPesananTextarea.dataset.userAddedContent = detailPesananTextarea.value;
+                }
+            });
+
+
+            loadCartFromLocalStorage();
+            renderCartSummary();
+
+            detailPesananTextarea.dataset.userAddedContent = detailPesananTextarea.value;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu MbokCatering - Pilihan Lengkap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-bg-light text-text-dark">
+
+    <header class="bg-bg-light shadow-md fixed w-full z-50">
+        <nav class="navbar navbar-expand-lg bg-bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">MbokCatering</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order.html">Pesan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Kontak</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="nav-link cart-icon-btn position-relative" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                                <i class="fas fa-shopping-cart fa-lg"></i>
+                                <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle" id="cart-count">0</span>
+                                <span class="visually-hidden">items in cart</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-primary-color text-text-light py-24 text-center">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Daftar Menu Kami</h1>
+            <p class="text-lg">Berbagai pilihan hidangan lezat untuk setiap selera dan acara.</p>
+        </div>
+    </section>
+
+    <div class="menu-section py-16">
+        <div class="container">
+            <div class="d-flex justify-content-center flex-wrap gap-3 mb-5" data-aos="fade-up">
+                <a href="#nasi-box" class="btn btn-primary-outline btn-sm">Nasi Box</a>
+                <a href="#snack-box" class="btn btn-primary-outline btn-sm">Snack Box</a>
+                <a href="#prasmanan" class="btn btn-primary-outline btn-sm">Prasmanan</a>
+                <a href="#tumpeng" class="btn btn-primary-outline btn-sm">Tumpeng & Nasi Kuning</a>
+            </div>
+
+            <div class="mb-5" id="nasi-box">
+                <h2 class="section-title text-primary-color mb-5" data-aos="fade-right">Nasi Box Komplit</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="card h-100">
+                            <img src="nasi-ayam-goreng.jpg" class="card-img-top" alt="Nasi Box Ayam Goreng">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Nasi Box Ayam Goreng Kremes</h5>
+                                <p class="card-text text-sm">Nasi putih, ayam goreng kremes, tahu/tempe, lalapan, sambal.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="25000">Rp 25.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="nasi-box-ayam-goreng-kremes"
+                                            data-item-name="Nasi Box Ayam Goreng Kremes"
+                                            data-item-price="25000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="nasi empal.jpg" class="card-img-top" alt="Nasi Box Empal Penyet">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Nasi Box Empal Penyet</h5>
+                                <p class="card-text text-sm">Nasi putih, empal penyet, tahu/tempe, terong, lalapan, sambal bawang.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="30000">Rp 30.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="nasi-box-empal-penyet"
+                                            data-item-name="Nasi Box Empal Penyet"
+                                            data-item-price="30000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100">
+                            <img src="nasi rendang.jpeg" class="card-img-top" alt="Nasi Box Rendang">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Nasi Box Rendang</h5>
+                                <p class="card-text text-sm">Nasi putih, rendang daging, sayur, telur.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="35000">Rp 35.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="nasi-box-rendang"
+                                            data-item-name="Nasi Box Rendang"
+                                            data-item-price="35000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5" id="snack-box">
+                <h2 class="section-title text-primary-color mb-5" data-aos="fade-right">Snack Box Aneka Jajanan</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="card h-100">
+                            <img src="snack1.jpg" class="card-img-top" alt="Snack Box Tradisional">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Snack Box Tradisional</h5>
+                                <p class="card-text text-sm">Berisi 3 macam jajanan pasar (lemper, kue sus, bolu pandan) + air mineral.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="15000">Rp 15.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="snack-box-tradisional"
+                                            data-item-name="Snack Box Tradisional"
+                                            data-item-price="15000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="snack4.jpg" class="card-img-top" alt="Snack Box Modern">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Snack Box Modern</h5>
+                                <p class="card-text text-sm">Berisi 3 macam modern (kue bolu, puding, arem-arem) + air mineral.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="20000">Rp 20.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="snack-box-modern"
+                                            data-item-name="Snack Box Modern"
+                                            data-item-price="20000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100">
+                            <img src="snack5.jpg" class="card-img-top" alt="Snack Box Varian Premium">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Snack Box Varian Premium</h5>
+                                <p class="card-text text-sm">Berisi 3 macam pilihan premium (martabak mini, roti, risol) + air mineral + tisu.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="25000">Rp 25.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="snack-box-varian-premium"
+                                            data-item-name="Snack Box Varian Premium"
+                                            data-item-price="25000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5" id="prasmanan">
+                <h2 class="section-title text-primary-color mb-5" data-aos="fade-right">Paket Prasmanan</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="card h-100">
+                            <img src="prasmanan1.jpeg" class="card-img-top" alt="Paket Prasmanan Standard">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Paket Prasmanan Standard</h5>
+                                <p class="card-text text-sm">Paket/set prasmanan. Nasi putih, 1 lauk utama, 1 sayur, kerupuk, buah.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="500000">Mulai dari Rp 500.000/set</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="prasmanan-standard"
+                                            data-item-name="Paket Prasmanan Standard"
+                                            data-item-price="500000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="prasmanan2.jpg" class="card-img-top" alt="Paket Prasmanan Premium">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Paket Prasmanan Premium</h5>
+                                <p class="card-text text-sm">Paket/set prasmanan. Nasi putih/nasi kuning, 2 lauk utama, 2 sayur, sup, dessert, buah, kerupuk.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="850000">Mulai dari Rp 850.000/set</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="prasmanan-premium"
+                                            data-item-name="Paket Prasmanan Premium"
+                                            data-item-price="850000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100">
+                            <img src="prasmanan3.png" class="card-img-top" alt="Paket Prasmanan Deluxe">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Paket Prasmanan Deluxe</h5>
+                                <p class="card-text text-sm">Paket/set prasmanan. Nasi pilihan, 3 lauk utama spesial, 2 sayur, sup, salad, 2 dessert, buah, kerupuk, minuman.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="1200000">Mulai dari Rp 1.200.000/set</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="prasmanan-deluxe"
+                                            data-item-name="Paket Prasmanan Deluxe"
+                                            data-item-price="1200000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5" id="tumpeng">
+                <h2 class="section-title text-primary-color mb-5" data-aos="fade-right">Tumpeng & Nasi Kuning</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                        <div class="card h-100">
+                            <img src="tumpeng1.jpg" class="card-img-top" alt="Tumpeng Komplit">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Tumpeng Komplit</h5>
+                                <p class="card-text text-sm">Nasi kuning/putih, ayam ingkung, perkedel, telur balado, urap, dll. Untuk 10-30 porsi.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="750000">Mulai dari Rp 750.000</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="tumpeng-komplit"
+                                            data-item-name="Tumpeng Komplit"
+                                            data-item-price="750000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="tumpeng2.jpg" class="card-img-top" alt="Tumpeng Mini">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Tumpeng Mini</h5>
+                                <p class="card-text text-sm">Porsi personal dengan lauk pauk standar tumpeng. Minimal 10 porsi.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="45000">Rp 45.000/porsi</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="tumpeng-mini"
+                                            data-item-name="Tumpeng Mini"
+                                            data-item-price="45000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="nasi kuning.jpg" class="card-img-top" alt="Nasi Kuning">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Nasi Kuning</h5>
+                                <p class="card-text text-sm">Paket porsi personal nasi kuning dengan lauk pauk.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <strong class="text-accent-color menu-item-price" data-price="15000">Rp 15.000/porsi</strong>
+                                    <button class="btn btn-danger btn-sm add-to-cart-btn"
+                                            data-item-id="nasi-kuning"
+                                            data-item-name="Nasi Kuning"
+                                            data-item-price="15000">Pesan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Keranjang Belanja Anda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items-container">
+                        <p class="text-muted text-center" id="empty-cart-message">Keranjang Anda masih kosong.</p>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Total: <span id="cart-total" class="text-primary-color">Rp 0</span></h5>
+                    <button type="button" class="btn btn-primary-outline" data-bs-dismiss="modal">Lanjut Belanja</button>
+                    <a href="order.html" class="btn btn-danger" id="checkout-button">Lanjut ke Pemesanan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-banner">
+        <div class="container px-6" data-aos="fade-up">
+            <h2>Butuh Menu Kustom atau Konsultasi?</h2>
+            <p>Jangan ragu untuk menghubungi kami untuk kebutuhan katering yang lebih spesifik atau pertanyaan lainnya.</p>
+            <a href="contact.html" class="btn-cta-light">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <footer class="bg-text-dark text-text-light py-12">
+        <div class="container px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-secondary-color text-lg font-semibold mb-4">MbokCatering</h3>
+                <p class="text-sm leading-relaxed">
+                    Menghadirkan kelezatan kuliner Nusantara dengan sentuhan modern. Kami berkomitmen menyajikan hidangan berkualitas untuk setiap acara Anda.
+                </p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="text-text-light hover:text-secondary-color mr-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-text-light hover:text-secondary-color mr-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-text-light hover:text-secondary-color mr-4"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-secondary-color text-lg font-semibold mb-4">Link Cepat</h3>
+                <ul class="text-sm">
+                    <li class="mb-2"><a href="index.html" class="hover:underline">Beranda</a></li>
+                    <li class="mb-2"><a href="about.html" class="hover:underline">Tentang Kami</a></li>
+                    <li class="mb-2"><a href="menu.html" class="hover:underline">Menu</a></li>
+                    <li class="mb-2"><a href="order.html" class="hover:underline">Pesan</a></li>
+                    <li class="mb-2"><a href="contact.html" class="hover:underline">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-secondary-color text-lg font-semibold mb-4">Hubungi Kami</h3>
+                <p class="text-sm">
+                    Jl. Wirobrajan No.123, Kota Yogyakarta, Daerah Istimewa Yogyakarta, 55253<br>
+                    Email: info@mbokcatering.com<br>
+                    Telepon: (021) 1234 5678<br>
+                    WhatsApp: <a href="https://wa.me/6283892313599" target="_blank" class="hover:underline">+62 812-3456-7890</a>
+                </p>
+            </div>
+        </div>
+        <div class="copyright text-center text-xs mt-8">
+            &copy; 2025 MbokCatering. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6283892313599" class="whatsapp-float fixed bottom-8 right-8" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+        let cart = {}; 
+
+        function loadCart() {
+            const savedCart = localStorage.getItem('mbokcatering_cart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+            }
+        }
+        function saveCart() {
+            localStorage.setItem('mbokcatering_cart', JSON.stringify(cart));
+            updateCartCount(); 
+            renderCart(); 
+        }
+
+        function addToCart(id, name, price) {
+            if (cart[id]) {
+                cart[id].qty += 1;
+            } else {
+                cart[id] = { name: name, price: price, qty: 1 };
+            }
+            saveCart();
+            showCartModal(); 
+        }
+
+        function removeFromCart(id) {
+            delete cart[id];
+            saveCart();
+        }
+
+        function updateCartItemQty(id, change) {
+            if (cart[id]) {
+                cart[id].qty += change;
+                if (cart[id].qty <= 0) {
+                    removeFromCart(id);
+                }
+            }
+            saveCart();
+        }
+
+        function renderCart() {
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const cartTotalElement = document.getElementById('cart-total');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            let total = 0;
+
+            cartItemsContainer.innerHTML = ''; 
+
+            if (Object.keys(cart).length === 0) {
+                emptyCartMessage.style.display = 'block';
+                document.getElementById('checkout-button').classList.add('disabled'); 
+            } else {
+                emptyCartMessage.style.display = 'none';
+                document.getElementById('checkout-button').classList.remove('disabled'); 
+                for (const id in cart) {
+                    const item = cart[id];
+                    const itemTotal = item.price * item.qty;
+                    total += itemTotal;
+
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'py-2', 'border-bottom');
+                    itemElement.innerHTML = `
+                        <div>
+                            <h6 class="mb-0 text-primary-color">${item.name}</h6>
+                            <small class="text-muted">Rp ${item.price.toLocaleString('id-ID')} x ${item.qty}</small>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-sm btn-outline-secondary me-2 update-qty-btn" data-id="${id}" data-change="-1">-</button>
+                            <span class="fw-bold me-2">${item.qty}</span>
+                            <button class="btn btn-sm btn-outline-secondary me-3 update-qty-btn" data-id="${id}" data-change="1">+</button>
+                            <span class="fw-bold text-dark">Rp ${itemTotal.toLocaleString('id-ID')}</span>
+                            <button class="btn btn-sm btn-danger ms-3 remove-from-cart-btn" data-id="${id}"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemElement);
+                }
+            }
+            cartTotalElement.textContent = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function updateCartCount() {
+            const cartCountElement = document.getElementById('cart-count');
+            let totalItems = 0;
+            for (const id in cart) {
+                totalItems += cart[id].qty;
+            }
+            cartCountElement.textContent = totalItems;
+            cartCountElement.style.display = totalItems > 0 ? 'block' : 'none'; 
+        }
+
+        function showCartModal() {
+            const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+            renderCart(); 
+            cartModal.show();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCart();
+            updateCartCount();
+            renderCart(); 
+
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const id = e.target.dataset.itemId;
+                    const name = e.target.dataset.itemName;
+                    const price = parseInt(e.target.dataset.itemPrice);
+                    addToCart(id, name, price);
+                });
+            });
+
+            document.getElementById('cart-items-container').addEventListener('click', (e) => {
+                if (e.target.classList.contains('remove-from-cart-btn')) {
+                    const id = e.target.dataset.id;
+                    removeFromCart(id);
+                } else if (e.target.classList.contains('update-qty-btn')) {
+                    const id = e.target.dataset.id;
+                    const change = parseInt(e.target.dataset.change);
+                    updateCartItemQty(id, change);
+                }
+            });
+
+            document.getElementById('checkout-button').addEventListener('click', (e) => {
+                if (Object.keys(cart).length === 0) {
+                    e.preventDefault(); 
+                    alert('Keranjang Anda kosong. Silakan tambahkan item terlebih dahulu.');
+                } else {
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>
